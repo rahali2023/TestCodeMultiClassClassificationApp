@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical Abstract Prediction</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: rgb(126, 14, 167);
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        #title {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        h2 {
+            font-size: 18px;
+            margin-top: 5px;
+        }
+
+        p {
+            color: #333;
+            font-size: 20px;
+            text-align: center;
+        }
+
+        b {
+            font-weight: bold;
+        }
+
+        .results {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 600px;
+        }
+
+        .result-box {
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        h4 {
+            text-align: center;
+            margin-top: 10px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <div id="title">Medical Abstract Category Prediction Application</div>
+			<h3>Predicting The Medical Category of a Research paper Abstract</h3>
+        </div>
+    </header>
+
+    <p><b>Prediction Results</b></p>
+
+    <div class="container results">   
+        <div class="result-box">
+            <h4>Abstract :</h4> <p>{{ abstract }}</p>
+        </div>
+        <div class="result-box">
+            <h4>Predicted Class :</h4> <p>{{ predicted_class }} </h4>
+        </div>
+        <div class="result-box">
+            <h4>Confidence :</h4> <p>{{ confidence }}</h4>
+        </div>
+    </div>
+
+</body>
+</html>
